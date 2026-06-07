@@ -32,11 +32,12 @@ class ChatRequest(BaseModel):
     message:str
     user_id:Optional[str]=None
     
-class Citations(BaseModel):
-    video_id:str
-    chunk_index:int
-    content_snippet:str
-    
+class Citation(BaseModel):
+    video_id: str
+    chunk_index: int
+    content_snippet: str
+
+
 class ChatMessageOut(BaseModel):
     id: str
     role: str
