@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+supabase
+langchain
+langchain-google-genai
+google-generativeai
+langchain-community
+sentence-transformers
+torch
+faster-whisper
+youtube-transcript-api
+yt-dlp
+psycopg2-binary
+httpx
+pydantic
+python-multipart
