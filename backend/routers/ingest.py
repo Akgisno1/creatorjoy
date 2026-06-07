@@ -53,10 +53,9 @@ async def ingest_video(req:IngestRequest):
             **meta,
         }).execute()
 
-    # Step 05: uncomment after creating backend/services/embeddings.py
-    # from services.embeddings import chunk_and_embed
-    # await chunk_and_embed(session_id, "A", transcript_a)
-    # await chunk_and_embed(session_id, "B", transcript_b)
+    from services.embeddings import chunk_and_embed
+    await chunk_and_embed(session_id, "A", transcript_a)
+    await chunk_and_embed(session_id, "B", transcript_b)
 
     chat = sb.table("chats").insert({
         "session_id": session_id,
